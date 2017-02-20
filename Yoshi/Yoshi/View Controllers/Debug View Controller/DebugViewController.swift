@@ -104,6 +104,9 @@ internal final class DebugViewController: UIViewController {
             relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 0.5)
         view.addConstraints([lineBottomConstraint, lineWidthConstraint, lineHeightConstraint])
 
+        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(longPressCopyVersionToClipBoard(_:)))
+        view.addGestureRecognizer(longPressGesture)
+
         return view
     }
 
@@ -123,6 +126,19 @@ internal final class DebugViewController: UIViewController {
 
     @objc private func close(_ sender: UIBarButtonItem) {
         completionHandler(nil)
+    }
+
+    /// Handle long press gesture to copy the cell's subtitle to the clipboard.
+    ///
+    /// - Parameter sender: Long
+    func longPressCopyVersionToClipBoard(_ sender: UIGestureRecognizer) {
+        guard sender.state == .began else {
+            return
+        }
+
+        let version = AppBundleUtility.appVersionText()
+        UIPasteboard.general.string = version
+        presentToast(message: "\(version) copied!")
     }
 }
 
