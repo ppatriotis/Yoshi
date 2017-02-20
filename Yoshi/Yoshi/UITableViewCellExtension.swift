@@ -56,15 +56,16 @@ extension UIView {
         toastBackground.alpha = 0.9
         toastBackground.layer.cornerRadius = 15.0
 
-        let tag = 10293829837420
+        let identifier = "227RQxyMaT9Zj7KDaeXE"
         window.subviews.forEach { subview in
-            if subview.tag == tag {
+            if subview.accessibilityIdentifier == identifier {
                 subview.removeFromSuperview()
             }
         }
-        toastBackground.tag = tag
+
+        toastBackground.accessibilityIdentifier = identifier
         window.addSubview(toastBackground)
-        window.tag = tag
+        toast.accessibilityIdentifier = identifier
         window.addSubview(toast)
 
         if #available(iOS 9.0, *) {
