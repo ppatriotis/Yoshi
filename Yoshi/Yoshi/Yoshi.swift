@@ -8,6 +8,8 @@
 
 /// The Debug Menu interface.
 public final class Yoshi {
+    
+    internal static var core: YoshiCore = YoshiCore()
 
     // MARK: - Setup
 
@@ -18,7 +20,7 @@ public final class Yoshi {
      - parameter invocations: The invocation types.
      */
     public class func setupDebugMenu(_ menuItems: [YoshiGenericMenu], invocations: [YoshiInvocation] = [.all]) {
-        YoshiConfigurationManager.sharedInstance.setupDebugMenuOptions(menuItems, invocations: invocations)
+        core.setupDebugMenuOptions(menuItems, invocations: invocations)
     }
 
     // MARK: - Invocation Functions
@@ -31,7 +33,7 @@ public final class Yoshi {
      */
     public class func motionBegan(_ motion: UIEventSubtype, withEvent event: UIEvent?) {
         guard motion == .motionShake
-            && YoshiConfigurationManager.sharedInstance.shouldShow(.shakeMotionGesture) else {
+            && core.shouldShow(.shakeMotionGesture) else {
             return
         }
 
@@ -48,7 +50,7 @@ public final class Yoshi {
     public class func touchesBegan(_ touches: Set<UITouch>, withEvent event: UIEvent?,
                                    minimumTouchRequirement: Int = 3) {
         guard (event?.allTouches?.count)! >= minimumTouchRequirement
-            && YoshiConfigurationManager.sharedInstance.shouldShow(.multiTouch) else {
+            && core.shouldShow(.multiTouch) else {
             return
         }
 
@@ -68,7 +70,7 @@ public final class Yoshi {
             return
         }
 
-        guard YoshiConfigurationManager.sharedInstance.shouldShow(.multiTouch) else {
+        guard core.shouldShow(.multiTouch) else {
             return
         }
 
@@ -94,14 +96,14 @@ public final class Yoshi {
      Should be called directly only if you want to manually invoke Yoshi
      */
     public class func show() {
-        YoshiConfigurationManager.sharedInstance.show()
+        core.show()
     }
     
     /// Return a navigation controller presenting the debug view controller.
     ///
     /// - Returns: Debug navigation controller
     public class func debugNavigationController() -> UINavigationController {
-        return YoshiConfigurationManager.sharedInstance.debugNavigationController()
+        return core.debugNavigationController()
     }
 
     /**
@@ -110,7 +112,7 @@ public final class Yoshi {
      - parameter completion: The block to execute upon completion of dismissal.
      */
     public class func dismiss(_ completion: (() -> Void)? = nil) {
-        YoshiConfigurationManager.sharedInstance.dismiss(completion)
+        core.dismiss(completion)
     }
 
 }

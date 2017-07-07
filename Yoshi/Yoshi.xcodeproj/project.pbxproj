@@ -20,6 +20,7 @@
 		32AA07541E60D417001516EA /* YoshiDateSelectorMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AA07521E60D417001516EA /* YoshiDateSelectorMenu.swift */; };
 		32AA07551E60D417001516EA /* YoshiDateSelectorMenuCellDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AA07531E60D417001516EA /* YoshiDateSelectorMenuCellDataSource.swift */; };
 		32AA07571E60D5C3001516EA /* YoshiReusableCellDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AA07561E60D5C3001516EA /* YoshiReusableCellDataSource.swift */; };
+		32E396B21F1022E20089E95F /* YoshiCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E396B11F1022E20089E95F /* YoshiCore.swift */; };
 		664E30761DBEA72700C313C2 /* YoshiInvocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664E30751DBEA72700C313C2 /* YoshiInvocation.swift */; };
 		94A8BC891F08029300022AE1 /* AppBundleUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A8BC851F08029300022AE1 /* AppBundleUtility.swift */; };
 		94A8BC8A1F08029300022AE1 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A8BC861F08029300022AE1 /* Color.swift */; };
@@ -31,7 +32,6 @@
 		94E2C9D51F09544100811CE9 /* YoshiSubmenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E2C9D11F09544100811CE9 /* YoshiSubmenu.swift */; };
 		94E2C9D81F0954C900811CE9 /* YoshiSingleSelectionMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E2C9D71F0954C900811CE9 /* YoshiSingleSelectionMenu.swift */; };
 		94E2C9DA1F095A8C00811CE9 /* YoshiSingleSelectionMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E2C9D91F095A8C00811CE9 /* YoshiSingleSelectionMenuItem.swift */; };
-		F902ED331C694529007975F5 /* YoshiConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F902ED2D1C694529007975F5 /* YoshiConfigurationManager.swift */; };
 		F902ED4E1C6A3B2D007975F5 /* DebugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F902ED4D1C6A3B2D007975F5 /* DebugViewController.swift */; };
 		F902ED541C6A831A007975F5 /* YoshiActionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F902ED531C6A831A007975F5 /* YoshiActionResult.swift */; };
 /* End PBXBuildFile section */
@@ -63,6 +63,7 @@
 		32AA07521E60D417001516EA /* YoshiDateSelectorMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoshiDateSelectorMenu.swift; sourceTree = "<group>"; };
 		32AA07531E60D417001516EA /* YoshiDateSelectorMenuCellDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoshiDateSelectorMenuCellDataSource.swift; sourceTree = "<group>"; };
 		32AA07561E60D5C3001516EA /* YoshiReusableCellDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoshiReusableCellDataSource.swift; sourceTree = "<group>"; };
+		32E396B11F1022E20089E95F /* YoshiCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoshiCore.swift; sourceTree = "<group>"; };
 		664E30751DBEA72700C313C2 /* YoshiInvocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoshiInvocation.swift; sourceTree = "<group>"; };
 		94A8BC851F08029300022AE1 /* AppBundleUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppBundleUtility.swift; sourceTree = "<group>"; };
 		94A8BC861F08029300022AE1 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -74,7 +75,6 @@
 		94E2C9D11F09544100811CE9 /* YoshiSubmenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoshiSubmenu.swift; sourceTree = "<group>"; };
 		94E2C9D71F0954C900811CE9 /* YoshiSingleSelectionMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoshiSingleSelectionMenu.swift; sourceTree = "<group>"; };
 		94E2C9D91F095A8C00811CE9 /* YoshiSingleSelectionMenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoshiSingleSelectionMenuItem.swift; sourceTree = "<group>"; };
-		F902ED2D1C694529007975F5 /* YoshiConfigurationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoshiConfigurationManager.swift; sourceTree = "<group>"; };
 		F902ED4D1C6A3B2D007975F5 /* DebugViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugViewController.swift; sourceTree = "<group>"; };
 		F902ED531C6A831A007975F5 /* YoshiActionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoshiActionResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,13 +129,13 @@
 			isa = PBXGroup;
 			children = (
 				276BCEA61C29A6EF002138C7 /* Info.plist */,
+				32E396AE1F1022B20089E95F /* Core */,
 				94A8BC841F08029300022AE1 /* Utility */,
 				276BCEBB1C29A8BB002138C7 /* View Controllers */,
 				32AA073D1E60D38B001516EA /* Menus */,
 				276BCEA41C29A6EF002138C7 /* Yoshi.h */,
 				276BCEC01C29AEDD002138C7 /* Yoshi.swift */,
 				F902ED531C6A831A007975F5 /* YoshiActionResult.swift */,
-				F902ED2D1C694529007975F5 /* YoshiConfigurationManager.swift */,
 				664E30751DBEA72700C313C2 /* YoshiInvocation.swift */,
 				32AA07561E60D5C3001516EA /* YoshiReusableCellDataSource.swift */,
 			);
@@ -197,6 +197,14 @@
 				32AA07531E60D417001516EA /* YoshiDateSelectorMenuCellDataSource.swift */,
 			);
 			path = YoshiDateSelectorMenu;
+			sourceTree = "<group>";
+		};
+		32E396AE1F1022B20089E95F /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				32E396B11F1022E20089E95F /* YoshiCore.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 		94A8BC841F08029300022AE1 /* Utility */ = {
@@ -394,7 +402,6 @@
 			files = (
 				94E2C9D51F09544100811CE9 /* YoshiSubmenu.swift in Sources */,
 				32AA07501E60D38B001516EA /* YoshiTableViewMenuItem.swift in Sources */,
-				F902ED331C694529007975F5 /* YoshiConfigurationManager.swift in Sources */,
 				F902ED4E1C6A3B2D007975F5 /* DebugViewController.swift in Sources */,
 				94A8BC911F0802A200022AE1 /* UIWindowExtension.swift in Sources */,
 				32AA07541E60D417001516EA /* YoshiDateSelectorMenu.swift in Sources */,
@@ -408,6 +415,7 @@
 				327D1FB01F0ECA7D008889C2 /* YoshiActionMenu.swift in Sources */,
 				94E2C9D41F09544100811CE9 /* YoshiMenuCellDataSource.swift in Sources */,
 				94E2C9D81F0954C900811CE9 /* YoshiSingleSelectionMenu.swift in Sources */,
+				32E396B21F1022E20089E95F /* YoshiCore.swift in Sources */,
 				F902ED541C6A831A007975F5 /* YoshiActionResult.swift in Sources */,
 				32AA074E1E60D38B001516EA /* YoshiTableViewMenu.swift in Sources */,
 				94E2C9D31F09544100811CE9 /* YoshiMenu.swift in Sources */,

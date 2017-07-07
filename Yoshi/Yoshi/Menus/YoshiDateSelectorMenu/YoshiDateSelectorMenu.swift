@@ -32,7 +32,7 @@ public extension YoshiDateSelectorMenu {
      - returns: A result for handling the selected menu item.
      */
     func execute() -> YoshiActionResult {
-        let bundle = Bundle(for: YoshiConfigurationManager.self)
+        let bundle = Bundle(for: YoshiCore.self)
         let datePickerViewController =
             DebugDatePickerViewController(nibName: String(describing: DebugDatePickerViewController.self),
                                           bundle: bundle)
